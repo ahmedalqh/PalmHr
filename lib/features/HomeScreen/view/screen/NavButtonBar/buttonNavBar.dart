@@ -44,7 +44,7 @@ class _BottomNavBarState extends State {
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _selectedTab,
         onTap: (index) => _changeTab(index),
-        selectedItemColor: Colors.black,
+        selectedItemColor: Color.fromARGB(255, 86, 168, 83),
         unselectedItemColor: Colors.grey,
         items: [
           BottomNavigationBarItem(
