@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "169459786265",
+    "project_id": "palm-hr",
+    "storage_bucket": "palm-hr.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:169459786265:android:d6a84b5ec34031fa4e4088",
+        "android_client_info": {
+          "package_name": "com.example.palmhr"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "169459786265-851a151ncjsrue6k02beq8pvmob9o6cu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAf8RZ44H8ZG-_3ZUqLoUqiUZOaeh-XvTE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "169459786265-851a151ncjsrue6k02beq8pvmob9o6cu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
