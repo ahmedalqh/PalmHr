@@ -8,17 +8,23 @@ class BottomNavBar extends StatefulWidget {
 }
 
 class _BottomNavBarState extends State {
-  int _selectedTab = 2;
+  int _selectedTab = 4;
 
   List _pages = [
     Center(
-      child: Text("Home"),
+      child: Text("لوحة تحكم"),
     ),
     Center(
-      child: Text("Products"),
+      child: Text("الموظفين"),
     ),
     Center(
-      child: Text("Products"),
+      child: Text("اضافه"),
+    ),
+    Center(
+      child: Text("طلباتي"),
+    ),
+    Center(
+      child: Text("نشاط"),
     ),
   ];
 
@@ -41,13 +47,16 @@ class _BottomNavBarState extends State {
         selectedItemColor: Colors.black,
         unselectedItemColor: Colors.grey,
         items: [
-          BottomNavigationBarItem(icon: Icon(Icons.home), label: "Dashboard"),
           BottomNavigationBarItem(
-              icon: Icon(Icons.people_alt), label: "Members"),
+              icon: Icon(Icons.dashboard_outlined), label: "لوحة التحكم"),
           BottomNavigationBarItem(
-              icon: Icon(Icons.room_outlined), label: "Meeting_Rooms"),
+              icon: Icon(Icons.people_alt), label: "الموظفين"),
           BottomNavigationBarItem(
-              icon: Icon(Icons.room_outlined), label: "Meeting_Rooms"),
+              icon: Icon(Icons.add_box_outlined), label: "اضف جديد"),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.border_outer_rounded), label: "طلباتي"),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.home_outlined), label: "نشاط"),
         ],
       ),
     );
