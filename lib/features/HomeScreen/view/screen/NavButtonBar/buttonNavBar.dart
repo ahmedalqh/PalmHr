@@ -1,26 +1,27 @@
 import 'package:flutter/material.dart';
-
-class MyNavigationBar extends StatefulWidget {
-  MyNavigationBar({Key key}) : super(key: key);
+class BottomNavBar extends StatefulWidget {
+  const BottomNavBar({Key key}) : super(key: key);
 
   @override
-  _MyNavigationBarState createState() => _MyNavigationBarState();
+  _BottomNavBarState createState() => _BottomNavBarState();
 }
 
-class _MyNavigationBarState extends State<MyNavigationBar> {
-  int _selectedIndex = 0;
-  static const List<Widget> _widgetOptions = <Widget>[
-    Text('Home Page',
-        style: TextStyle(fontSize: 35, fontWeight: FontWeight.bold)),
-    Text('Search Page',
-        style: TextStyle(fontSize: 35, fontWeight: FontWeight.bold)),
-    Text('Profile Page',
-        style: TextStyle(fontSize: 35, fontWeight: FontWeight.bold)),
+class _BottomNavBarState extends State{
+  int _selectedTab = 0;
+
+  List _pages = [
+    Center(
+      child: Text("Home"),
+    ),
+    
+    Center(
+      child: Text("Products"),
+    ),
   ];
 
-  void _onItemTapped(int index) {
+  _changeTab(int index) {
     setState(() {
-      _selectedIndex = index;
+      _selectedTab = index;
     });
   }
 
@@ -28,33 +29,22 @@ class _MyNavigationBarState extends State<MyNavigationBar> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-          title: const Text('Flutter BottomNavigationBar Example'),
-          backgroundColor: Colors.green),
-      body: Center(
-        child: _widgetOptions.elementAt(_selectedIndex),
+        backgroundColor: Colors.white,
       ),
+      body: _pages[_selectedTab],
       bottomNavigationBar: BottomNavigationBar(
-          items: const <BottomNavigationBarItem>[
-            BottomNavigationBarItem(
-                icon: Icon(Icons.home),
-                // title: Text('Home'),
-                backgroundColor: Colors.green),
-            BottomNavigationBarItem(
-                icon: Icon(Icons.search),
-                // title: Text('Search'),
-                backgroundColor: Colors.yellow),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.person),
-              // title: Text('Profile'),
-              backgroundColor: Colors.blue,
-            ),
-          ],
-          type: BottomNavigationBarType.shifting,
-          currentIndex: _selectedIndex,
-          selectedItemColor: Colors.black,
-          iconSize: 40,
-          onTap: _onItemTapped,
-          elevation: 5),
+        currentIndex: _selectedTab,
+        onTap: (index) => _changeTab(index),
+        selectedItemColor: Colors.black,
+        unselectedItemColor: Colors.grey,
+        items: [
+          BottomNavigationBarItem(icon: Icon(Icons.home), label: "Dashboard"),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.people_alt), label: "Members"),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.room_outlined), label: "Meeting_Rooms"),
+        ],
+      ),
     );
   }
 }
