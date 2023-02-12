@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 class BottomNavBar extends StatefulWidget {
   const BottomNavBar({Key key}) : super(key: key);
 
@@ -6,14 +7,16 @@ class BottomNavBar extends StatefulWidget {
   _BottomNavBarState createState() => _BottomNavBarState();
 }
 
-class _BottomNavBarState extends State{
-  int _selectedTab = 0;
+class _BottomNavBarState extends State {
+  int _selectedTab = 2;
 
   List _pages = [
     Center(
       child: Text("Home"),
     ),
-    
+    Center(
+      child: Text("Products"),
+    ),
     Center(
       child: Text("Products"),
     ),
@@ -41,6 +44,8 @@ class _BottomNavBarState extends State{
           BottomNavigationBarItem(icon: Icon(Icons.home), label: "Dashboard"),
           BottomNavigationBarItem(
               icon: Icon(Icons.people_alt), label: "Members"),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.room_outlined), label: "Meeting_Rooms"),
           BottomNavigationBarItem(
               icon: Icon(Icons.room_outlined), label: "Meeting_Rooms"),
         ],
