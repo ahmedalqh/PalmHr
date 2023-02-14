@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
+import 'package:palmhr/features_auth/logic/controllers/auth_controller.dart';
 
 class BottomNavBar extends StatefulWidget {
-  const BottomNavBar({Key key}) : super(key: key);
+  BottomNavBar({Key});
+  final controller = Get.put(AuthController());
 
   @override
   _BottomNavBarState createState() => _BottomNavBarState();

@@ -49,7 +49,7 @@ class DefaultFirebaseOptions {
     }
   }
 
-  static const FirebaseOptions android = FirebaseOptions(
+  static  FirebaseOptions android = FirebaseOptions(
     apiKey: 'AIzaSyAf8RZ44H8ZG-_3ZUqLoUqiUZOaeh-XvTE',
     appId: '1:169459786265:android:d6a84b5ec34031fa4e4088',
     messagingSenderId: '169459786265',
@@ -57,13 +57,14 @@ class DefaultFirebaseOptions {
     storageBucket: 'palm-hr.appspot.com',
   );
 
-  static const FirebaseOptions ios = FirebaseOptions(
+  static  FirebaseOptions ios = FirebaseOptions(
     apiKey: 'AIzaSyAptx22JoZWuHJrsw3skxcPqJ0-qqOdZes',
     appId: '1:169459786265:ios:1a423a2460a955f74e4088',
     messagingSenderId: '169459786265',
     projectId: 'palm-hr',
     storageBucket: 'palm-hr.appspot.com',
-    iosClientId: '169459786265-f32b8oov4pni82dk89526sntdb1buj66.apps.googleusercontent.com',
+    iosClientId:
+        '169459786265-f32b8oov4pni82dk89526sntdb1buj66.apps.googleusercontent.com',
     iosBundleId: 'com.example.palmhr',
   );
 }
