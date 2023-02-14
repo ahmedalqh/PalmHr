@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:palmhr/features/HomeScreen/view/screen/activity/HSactivity.dart';
 
 class BottomNavBar extends StatefulWidget {
   const BottomNavBar({Key key}) : super(key: key);
@@ -24,7 +25,7 @@ class _BottomNavBarState extends State {
       child: Text("طلباتي"),
     ),
     Center(
-      child: Text("نشاط"),
+      child: HomeScreenActivity(),
     ),
   ];
 
@@ -37,9 +38,9 @@ class _BottomNavBarState extends State {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.white,
-      ),
+      // appBar: AppBar(
+      //   backgroundColor: Colors.white,
+      // ),
       body: _pages[_selectedTab],
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _selectedTab,
@@ -48,9 +49,13 @@ class _BottomNavBarState extends State {
         unselectedItemColor: Colors.grey,
         items: [
           BottomNavigationBarItem(
-              icon: Icon(Icons.dashboard_outlined), label: "لوحة التحكم"),
+            icon: Icon(
+              Icons.dashboard_outlined,
+            ),
+            label: "لوحة التحكم",
+          ),
           BottomNavigationBarItem(
-              icon: Icon(Icons.people_alt), label: "الموظفين"),
+              icon: Icon(Icons.people_alt_outlined), label: "الموظفين"),
           BottomNavigationBarItem(
               icon: Icon(Icons.add_box_outlined), label: "اضف جديد"),
           BottomNavigationBarItem(
