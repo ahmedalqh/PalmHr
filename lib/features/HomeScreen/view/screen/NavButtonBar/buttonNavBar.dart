@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../../../../OrdersScreen/views/screens/orders_screen.dart';
+
 class BottomNavBar extends StatefulWidget {
   const BottomNavBar({Key key}) : super(key: key);
 
@@ -21,7 +23,7 @@ class _BottomNavBarState extends State {
       child: Text("اضافه"),
     ),
     Center(
-      child: Text("طلباتي"),
+      child: OrdersScreen(),
     ),
     Center(
       child: Text("نشاط"),
@@ -37,9 +39,9 @@ class _BottomNavBarState extends State {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.white,
-      ),
+      // appBar: AppBar(
+      //   backgroundColor: Colors.white,
+      // ),
       body: _pages[_selectedTab],
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _selectedTab,
