@@ -12,13 +12,16 @@ class CardActivity extends StatelessWidget {
     return SingleChildScrollView(
       child: Container(
         width: 380,
-        decoration: const BoxDecoration(boxShadow: [
-          BoxShadow(
-              color: Color.fromARGB(255, 231, 230, 230),
-              blurRadius: 10,
-              spreadRadius: 0.2,
-              blurStyle: BlurStyle.normal),
-        ], color: Colors.white),
+        decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(6),
+            boxShadow: [
+              BoxShadow(
+                  color: Color.fromARGB(255, 231, 230, 230),
+                  blurRadius: 10,
+                  spreadRadius: 0.2,
+                  blurStyle: BlurStyle.normal),
+            ],
+            color: Colors.white),
         child: Column(
           children: [
             Padding(
@@ -105,11 +108,6 @@ class CardActivity extends StatelessWidget {
                       Icons.favorite_outline,
                       color: Color.fromARGB(255, 203, 203, 203),
                     ),
-                    Text('   5'),
-                    Icon(
-                      Icons.access_time,
-                      color: Color.fromARGB(255, 203, 203, 203),
-                    )
                   ],
                 )
               ],
