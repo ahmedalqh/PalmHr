@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:palmhr/features/HomeScreen/view/screen/activity/notifcation.dart';
 import 'package:palmhr/features/HomeScreen/view/screen/approved.dart';
 
 import 'activity/checkIn.dart';
@@ -12,7 +13,7 @@ class AppBarScreen extends StatelessWidget {
     return Stack(children: [
       Container(
         height: 100,
-        color: Color.fromARGB(255, 244, 243, 243),
+        color: const Color.fromARGB(255, 244, 243, 243),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
@@ -37,7 +38,7 @@ class AppBarScreen extends StatelessWidget {
                               isScrollControlled: true,
                               context: context,
                               builder: ((context) {
-                                return Container();
+                                return NotificationScreen();
                               }));
                         },
                         child: const Icon(

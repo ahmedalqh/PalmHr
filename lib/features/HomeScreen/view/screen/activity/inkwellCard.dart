@@ -108,7 +108,6 @@ class InkwellCard extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
-                // Text('demo'),
                 Container(
                     width: 300,
                     height: 53,
